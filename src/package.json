@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tarbielee/Express-forms-and-templates/issues"
   },
-  "homepage": "https://github.com/tarbielee/Express-forms-and-templates#readme"
+  "homepage": "https://github.com/tarbielee/Express-forms-and-templates#readme",
+  "dependencies": {
+    "pug": "^2.0.4"
+  }
 }

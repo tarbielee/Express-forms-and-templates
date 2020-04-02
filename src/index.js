@@ -1,12 +1,33 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 
+app.set('views', path.join(_dirname, 'views'));
+app.set('views engine', 'pug');
+
 app.get('/', function(req, res){
-    res.send('Hello World');
+    let form = [
+        {
+            id:1,
+            title:'form 1',
+            author:'Tarbie',
+            body:'This is form one'
+        }
+    ]
+    res.render('index', {
+        title: 'Form',
+        form: form
+    });
 });
 
-app.listen(3000, function(){
-    console.log('server started on port 3000...');
+app.get('/Form/add', function(req, res){
+    res.render('add_article', {
+        title: 'Add Form'
+    });
+})
+
+app.listen(5000, function(){
+    console.log('server started on port 5000...');
 });
  
